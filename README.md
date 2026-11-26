@@ -10,6 +10,6 @@
 - `conftest.py`：Pytest 公共配置
 
 ## 运行方式
-bash
-pip install -r requirements.txt
-pytest
+- `bash`
+- `pip install -r requirements.txt`
+- `pytest`
