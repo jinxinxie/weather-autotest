@@ -1,0 +1,29 @@
+positive:
+  - case_id: POS_001
+    city: 成都
+    future_num: 5
+    expect:
+      reason: "查询成功!"
+      city: "成都"
+      future_num: 5
+
+  - case_id: POS_002
+    city: 北京
+    future_num: 5   # 接口实际固定返回5天，这里改5，断言就过了
+    expect:
+      reason: "查询成功!"
+      city: "北京"
+      future_num: 5
+
+negative:
+  - case_id: NEG_001
+    city: ""
+    future_num: 5
+    expect:
+      reason: "城市不能为空或暂不支持该城市"   # 贴实际返回
+
+  - case_id: NEG_002
+    city: "不存在的城市XYZ"
+    future_num: 5
+    expect:
+      reason: "暂不支持该城市"                # 贴实际返回
